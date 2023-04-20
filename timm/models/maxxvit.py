@@ -140,7 +140,7 @@ class MaxxVitCfg:
 
 
 class Attention2d(nn.Module):
-    fused_attn: Final[bool]
+    fused_attn: bool
 
     """ multi-head attention for 2D NCHW tensors"""
     def __init__(
@@ -210,7 +210,7 @@ class Attention2d(nn.Module):
 
 class AttentionCl(nn.Module):
     """ Channels-last multi-head attention (B, ..., C) """
-    fused_attn: Final[bool]
+    fused_attn: bool
 
     def __init__(
             self,
